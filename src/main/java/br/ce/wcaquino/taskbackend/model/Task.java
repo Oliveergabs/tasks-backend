@@ -1,6 +1,7 @@
 package br.ce.wcaquino.taskbackend.model;
 
 import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ public class Task {
 	private String task;
 	
 	@Column(nullable = false)
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dueDate;
 	
 	public Task() {}
